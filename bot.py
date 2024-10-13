@@ -37,7 +37,7 @@ async def on_member_remove(member):
     channel = discord.utils.get(member.guild.text_channels, name='general')  # Change 'general' to your desired channel name
     if channel:
         # Generate a random number between 1 and 100
-        if random.randint(1, 100) <= 99:  # 20% chance
+        if random.randint(1, 100) <= 20:  # 20% chance
             await channel.send(f"{member} has been ejected. They were an Impostor.")
         else:
             await channel.send(f"{member} has been ejected. They were not an Impostor.")
